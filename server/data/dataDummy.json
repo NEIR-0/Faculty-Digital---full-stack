@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "transactionDate": "2023-01-01",
+    "total_Income": 100000000,
+    "source": "Product Sales"
+  },
+  {
+    "id": 2,
+    "transactionDate": "2023-02-01",
+    "total_Income": 120000000,
+    "source": "Service Fees"
+  },
+  {
+    "id": 3,
+    "transactionDate": "2023-03-01",
+    "total_Income": 90000000,
+    "source": "Consulting"
+  },
+  {
+    "id": 4,
+    "transactionDate": "2023-04-01",
+    "total_Income": 110000000,
+    "source": "Royalties"
+  },
+  {
+    "id": 5,
+    "transactionDate": "2023-05-01",
+    "total_Income": 95000000,
+    "source": "Product Sales"
+  },
+  {
+    "id": 6,
+    "transactionDate": "2023-06-01",
+    "total_Income": 130000000,
+    "source": "Service Fees"
+  },
+  {
+    "id": 7,
+    "transactionDate": "2023-07-01",
+    "total_Income": 105000000,
+    "source": "Consulting"
+  },
+  {
+    "id": 8,
+    "transactionDate": "2023-08-01",
+    "total_Income": 115000000,
+    "source": "Product Sales"
+  },
+  {
+    "id": 9,
+    "transactionDate": "2023-09-01",
+    "total_Income": 98000000,
+    "source": "Royalties"
+  },
+  {
+    "id": 10,
+    "transactionDate": "2023-10-01",
+    "total_Income": 125000000,
+    "source": "Service Fees"
+  },
+  {
+    "id": 11,
+    "transactionDate": "2023-11-01",
+    "total_Income": 102000000,
+    "source": "Consulting"
+  },
+  {
+    "id": 12,
+    "transactionDate": "2023-12-01",
+    "total_Income": 108000000,
+    "source": "Product Sales"
+  }
+]
