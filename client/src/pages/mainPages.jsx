@@ -12,8 +12,10 @@ function MainPages() {
   }, [pathname, navigate]);
   return (
     <>
-      <SideBar />
-      <Outlet />
+      <div className="overflow-x-hidden">
+        <SideBar />
+        <Outlet />
+      </div>
     </>
   );
 }

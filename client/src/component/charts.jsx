@@ -11,28 +11,9 @@ import {
   ResponsiveContainer,
 } from "recharts";
 
-// const data = [
-//   {
-//     name: "Page A",
-//     uv: 4000,
-//   },
-//   {
-//     name: "Page B",
-//     uv: 3000,
-//   },
-//   {
-//     name: "Page C",
-//     uv: 2000,
-//   },
-//   {
-//     name: "Page D",
-//     uv: 2780,
-//   },
-// ];
-
 function Charts({ data }) {
   return (
-    <ResponsiveContainer width="100%" height="100%">
+    <ResponsiveContainer>
       <BarChart
         data={data}
         margin={{

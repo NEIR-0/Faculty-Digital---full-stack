@@ -38,7 +38,7 @@ function LoginPages() {
   return (
     <>
       <section className="w-full h-screen flex">
-        <div className="w-[20%] h-full flex items-center justify-center">
+        <div className="hidden md:w-[35%] md:h-full md:flex md:items-center md:justify-center lg:w-[20%]">
           <div className="">
             <h1 className="text-center text-[30px] font-bold mb-5">Login</h1>
             <form onSubmit={submitUser}>
@@ -84,12 +84,57 @@ function LoginPages() {
             </form>
           </div>
         </div>
-        <div className="w-[80%] h-full">
+
+        <div className="w-full h-full relative md:w-[65%] md:block lg:w-[80%]">
           <img
             src="https://img.freepik.com/free-photo/modern-office-building-low-angle-view-skyscrapers-city-singapore-modern-office-building-low-angle-view-skyscrapers-city-singapore_231208-1463.jpg?w=740&t=st=1704889159~exp=1704889759~hmac=780f8cf892140397e54abe707c1cef59dc3e7cce1cc9233a016fa27de9de0944"
             alt="img"
             className="w-full h-full"
           />
+          <div className="w-[90%] absolute py-5 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 backdrop-blur-sm flex flex-col justify-center items-center md:hidden">
+            <h1 className="text-[30px] font-bold mb-5">Login</h1>
+            <form onSubmit={submitUser}>
+              {/* email */}
+              <ul>
+                <li>
+                  <label htmlFor="email">Email:</label>
+                </li>
+                <li>
+                  <input
+                    className="w-full h-7 rounded-md px-1"
+                    type="text"
+                    onChange={inputUser}
+                    name="email"
+                    id="email"
+                  />
+                </li>
+              </ul>
+
+              {/* password */}
+              <ul>
+                <li>
+                  <label htmlFor="password">password</label>
+                </li>
+                <li>
+                  <input
+                    className="w-full h-7 rounded-md px-1"
+                    type="password"
+                    onChange={inputUser}
+                    name="password"
+                    id="password"
+                  />
+                </li>
+              </ul>
+              <div className="w-full flex justify-center items-center">
+                <button
+                  className="mt-5 rounded-md px-10 py-2 bg-black text-white text-center"
+                  type="submit"
+                >
+                  login
+                </button>
+              </div>
+            </form>
+          </div>
         </div>
       </section>
     </>

@@ -63,7 +63,7 @@ function DetailPages() {
   };
   return (
     <>
-      <section className="ml-[15%] p-5">
+      <section className="p-5 md:ml-[20%] lg:ml-[15%]">
         <h1 className="text-[25px] mb-10 underline">Detail Income:</h1>
         <div className="w-full h-7 flex justify-between mb-5">
           {/* sort */}

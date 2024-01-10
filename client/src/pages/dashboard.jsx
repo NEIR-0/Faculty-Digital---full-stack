@@ -36,12 +36,22 @@ function Dashboard() {
 
   return (
     <>
-      <section className="ml-[15%] h-screen p-5">
+      <section className="p-5 h-screen md:ml-[20%] lg:ml-[15%]">
         <div className="flex items-center flex-col justify-center w-full h-full">
-          <h1 className="text-[30px] mb-5">Company Revenue of 2023</h1>
-          <div className="w-full h-[500px] ps-5">
+          <h1 className="text-[30px] mb-5 text-center">
+            Company Revenue of 2023
+          </h1>
+          <div className="w-full h-[300px] md:h-[400px] lg:w-[70%] lg:h-[500px] lg:">
             <Charts data={data} />
           </div>
+          <p className="text-[10px] mt-5 text-center">
+            Based on the provided data, it can be concluded that the sources
+            contributing the most income are "Service Fees" with a total income
+            of 120,000,000 in February 2023, followed by "Product Sales" with a
+            total income of 115,000,000 in August 2023. These two categories
+            stand out as they make the most significant contributions to the
+            overall income throughout the year 2023
+          </p>
         </div>
       </section>
     </>
