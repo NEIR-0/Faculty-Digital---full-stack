@@ -1,7 +1,7 @@
 const { User, Revenue } = require("../models");
 const { comparePass } = require("../helper/bcryptjs");
 const { createToken, verifyToken } = require("../helper/jwt");
-
+const { Op } = require("sequelize");
 class Controllers {
   static async login(req, res, next) {
     try {
@@ -26,24 +26,23 @@ class Controllers {
     }
   }
 
-  static async register(req, res, next) {
-    try {
-      const { username, email, password } = req.body;
-      if (!username) throw { name: "invalidUsername" };
-      if (!email) throw { name: "invalidEmail" };
-      if (!password) throw { name: "invalidPassword" };
-      await User.create({ username, email, password });
-      res.status(201).json({ message: "success add new user" });
-    } catch (error) {
-      next(error);
-    }
-  }
-
   static async dashboard(req, res, next) {
     try {
-      const data = await Revenue.findAll({
+      const options = {
+        where: {},
         order: [["transactionDate", "DESC"]],
-      });
+      };
+
+      if (req.query.filter) {
+        const filterDate = new Date(req.query.filter);
+        options.where.transactionDate = { [Op.eq]: filterDate };
+      }
+
+      if (req.query.search) {
+        options.where.source = { [Op.iLike]: `%${req.query.search}%` };
+      }
+
+      const data = await Revenue.findAll(options);
       res.status(200).json(data);
     } catch (error) {
       console.log(error);

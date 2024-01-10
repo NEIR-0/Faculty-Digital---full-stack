@@ -3,7 +3,6 @@
 module.exports = {
   async up(queryInterface, Sequelize) {
     const dataRevenues = require("../data/dataDummy.json").map((el) => {
-      delete el.id;
       el.createdAt = new Date();
       el.updatedAt = new Date();
 

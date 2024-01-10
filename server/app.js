@@ -13,7 +13,6 @@ app.use(cors());
 app.use(express.json());
 
 app.post("/login", controllers.login);
-app.post("/register", controllers.register);
 app.use(authentication);
 app.get("/", controllers.dashboard);
 
